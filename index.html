@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fernando Felix — Currículo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function () {
+      const saved = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const theme = saved || (prefersDark ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <a href="#inicio" class="nav-brand">
+      <span class="brand-mark" aria-hidden="true">FF</span>
+      <span class="brand-text">Fernando Felix</span>
+    </a>
+    <div class="nav-right">
+      <button
+        class="theme-toggle"
+        id="themeToggle"
+        type="button"
+        aria-label="Alternar tema claro ou escuro"
+        title="Alternar tema"
+      >
+        <i data-lucide="sun" class="icon-sun"></i>
+        <i data-lucide="moon" class="icon-moon"></i>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+        <i data-lucide="menu"></i>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li>
+          <a href="#experiencia">
+            <i data-lucide="briefcase"></i>
+            <span>Experiência</span>
+          </a>
+        </li>
+        <li>
+          <a href="#formacao">
+            <i data-lucide="graduation-cap"></i>
+            <span>Formação</span>
+          </a>
+        </li>
+        <li>
+          <a href="#projetos">
+            <i data-lucide="folder-kanban"></i>
+            <span>Projetos</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page">
+    <aside class="sidebar">
+      <section class="card card-accent profile" id="inicio">
+        <div class="profile-photo reveal">
+          <img src="foto.png" alt="Foto de Fernando Felix" width="128" height="128" />
+        </div>
+        <h1 class="profile-name reveal">Fernando Felix</h1>
+        <p class="profile-role reveal reveal-delay-1">Software Engineer</p>
+        <p class="profile-tagline reveal reveal-delay-2">Nada é impossível</p>
+        <div class="profile-status reveal reveal-delay-2">
+          <span class="status-dot" aria-hidden="true"></span>
+          Disponível
+        </div>
+      </section>
+
+      <section class="card reveal">
+        <h2 class="section-title">Contato</h2>
+        <ul class="contact-list">
+          <li>
+            <span class="icon-box" aria-hidden="true"><i data-lucide="mail"></i></span>
+            <div>
+              <span class="contact-label">E-mail</span>
+              <a href="mailto:fernando@email.com">fernando@email.com</a>
+            </div>
+          </li>
+          <li>
+            <span class="icon-box" aria-hidden="true"><i data-lucide="map-pin"></i></span>
+            <div>
+              <span class="contact-label">Localização</span>
+              <span>Brasil</span>
+            </div>
+          </li>
+          <li>
+            <span class="icon-box" aria-hidden="true"><i data-lucide="layers"></i></span>
+            <div>
+              <span class="contact-label">Perfil</span>
+              <span>Full Stack · 5+ anos</span>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card reveal">
+        <h2 class="section-title">Habilidades técnicas</h2>
+        <div class="tech-chips">
+          <span>React</span>
+          <span>TypeScript</span>
+          <span>Node.js</span>
+          <span>Next.js</span>
+          <span>PostgreSQL</span>
+          <span>Vue.js</span>
+          <span>AWS</span>
+          <span>Git</span>
+        </div>
+        <div class="skill-meters">
+          <div class="skill-meter" data-level="92">
+            <div class="skill-meter-top">
+              <span>Frontend</span>
+              <span>92%</span>
+            </div>
+            <div class="progress-track" aria-hidden="true">
+              <span class="progress-fill"></span>
+            </div>
+          </div>
+          <div class="skill-meter" data-level="88">
+            <div class="skill-meter-top">
+              <span>Backend</span>
+              <span>88%</span>
+            </div>
+            <div class="progress-track" aria-hidden="true">
+              <span class="progress-fill"></span>
+            </div>
+          </div>
+          <div class="skill-meter" data-level="78">
+            <div class="skill-meter-top">
+              <span>Cloud &amp; DevOps</span>
+              <span>78%</span>
+            </div>
+            <div class="progress-track" aria-hidden="true">
+              <span class="progress-fill"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card reveal" id="idiomas">
+        <h2 class="section-title">Idiomas</h2>
+        <div class="skill-meters">
+          <div class="skill-meter lang-item" data-level="100">
+            <div class="skill-meter-top">
+              <span>Português · Nativo</span>
+              <span>C2</span>
+            </div>
+            <div class="progress-track" aria-hidden="true">
+              <span class="progress-fill"></span>
+            </div>
+          </div>
+          <div class="skill-meter lang-item" data-level="85">
+            <div class="skill-meter-top">
+              <span>Inglês · Avançado</span>
+              <span>C1</span>
+            </div>
+            <div class="progress-track" aria-hidden="true">
+              <span class="progress-fill"></span>
+            </div>
+          </div>
+          <div class="skill-meter lang-item" data-level="55">
+            <div class="skill-meter-top">
+              <span>Espanhol · Intermediário</span>
+              <span>B1</span>
+            </div>
+            <div class="progress-track" aria-hidden="true">
+              <span class="progress-fill"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </aside>
+
+    <main class="canvas">
+      <section class="card card-accent reveal">
+        <h2 class="section-title">
+          <span class="icon-box" aria-hidden="true"><i data-lucide="user"></i></span>
+          Sobre mim
+        </h2>
+        <p class="body-copy">
+          Software Engineer full stack com mais de 5 anos de experiência em APIs e interfaces de produção.
+          Atua com React, Node.js e TypeScript, com foco em performance, qualidade de código e entrega contínua.
+          Combina visão de produto com rigor técnico — da arquitetura à revisão de PRs.
+        </p>
+        <div class="hero-cta">
+          <a href="#experiencia" class="btn btn-primary">
+            <i data-lucide="arrow-down"></i>
+            Ver trajetória
+          </a>
+          <a href="mailto:fernando@email.com" class="btn btn-ghost">
+            <i data-lucide="send"></i>
+            Contato
+          </a>
+        </div>
+      </section>
+
+      <section class="card card-accent" id="experiencia">
+        <h2 class="section-title reveal">
+          <span class="icon-box" aria-hidden="true"><i data-lucide="briefcase"></i></span>
+          Experiência profissional
+        </h2>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-dot current" aria-hidden="true"></div>
+            <div class="timeline-body">
+              <h3>Software Engineer</h3>
+              <p class="meta">Tech Solutions · Remoto · 2022 — Atual</p>
+              <ul>
+                <li>Desenvolvimento de APIs e interfaces com React, Node.js e TypeScript</li>
+                <li>Melhoria de performance em aplicações de alto tráfego</li>
+                <li>Mentoria de juniores e revisão de código em PRs</li>
+              </ul>
+              <div class="tech-chips">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>TypeScript</span>
+                <span>PostgreSQL</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-body">
+              <h3>Desenvolvedor Full Stack</h3>
+              <p class="meta">Digital Hub · Híbrido · 2020 — 2022</p>
+              <ul>
+                <li>Criação de dashboards e sistemas internos para clientes B2B</li>
+                <li>Integração com APIs de pagamento e autenticação OAuth</li>
+                <li>Implantação de CI/CD e boas práticas de testes</li>
+              </ul>
+              <div class="tech-chips">
+                <span>JavaScript</span>
+                <span>Vue.js</span>
+                <span>Express</span>
+                <span>MongoDB</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-body">
+              <h3>Desenvolvedor Junior</h3>
+              <p class="meta">StartApp · Presencial · 2018 — 2020</p>
+              <ul>
+                <li>Manutenção e evolução de aplicações web legadas</li>
+                <li>Participação em sprints ágeis e pair programming</li>
+                <li>Automação de processos internos com scripts</li>
+              </ul>
+              <div class="tech-chips">
+                <span>HTML/CSS</span>
+                <span>PHP</span>
+                <span>MySQL</span>
+                <span>Git</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="card card-accent" id="formacao">
+        <h2 class="section-title reveal">
+          <span class="icon-box" aria-hidden="true"><i data-lucide="graduation-cap"></i></span>
+          Formação
+        </h2>
+        <div class="edu-list">
+          <article class="edu-item reveal">
+            <h3>Bacharelado em Ciência da Computação</h3>
+            <p class="meta">Universidade Federal · 2015 — 2019</p>
+            <p>Graduação completa</p>
+          </article>
+          <article class="edu-item reveal">
+            <h3>Especialização em Engenharia de Software</h3>
+            <p class="meta">Pós-graduação · 2021</p>
+            <p>Arquitetura e qualidade de código</p>
+          </article>
+          <article class="edu-item reveal">
+            <h3>AWS Cloud Practitioner</h3>
+            <p class="meta">Certificação · 2023</p>
+            <p>Fundamentos de nuvem</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="card card-accent" id="projetos">
+        <h2 class="section-title reveal">
+          <span class="icon-box" aria-hidden="true"><i data-lucide="folder-kanban"></i></span>
+          Projetos
+        </h2>
+        <div class="projects-grid">
+          <article class="project reveal">
+            <div class="project-icon" aria-hidden="true">
+              <i data-lucide="layout-dashboard"></i>
+            </div>
+            <h3>Dashboard Analytics</h3>
+            <p>Painel em tempo real para métricas de negócio, com gráficos interativos e exportação de relatórios.</p>
+            <div class="tech-chips">
+              <span>React</span>
+              <span>D3.js</span>
+              <span>API REST</span>
+            </div>
+            <a href="#" class="project-link">
+              Ver projeto <i data-lucide="arrow-up-right"></i>
+            </a>
+          </article>
+
+          <article class="project reveal reveal-delay-1">
+            <div class="project-icon" aria-hidden="true">
+              <i data-lucide="shopping-bag"></i>
+            </div>
+            <h3>E-commerce Modular</h3>
+            <p>Loja online com carrinho, checkout e painel admin. Foco em performance e SEO.</p>
+            <div class="tech-chips">
+              <span>Next.js</span>
+              <span>Stripe</span>
+              <span>Prisma</span>
+            </div>
+            <a href="#" class="project-link">
+              Ver projeto <i data-lucide="arrow-up-right"></i>
+            </a>
+          </article>
+
+          <article class="project reveal reveal-delay-2">
+            <div class="project-icon" aria-hidden="true">
+              <i data-lucide="bot"></i>
+            </div>
+            <h3>Bot de Produtividade</h3>
+            <p>Automação de tarefas rotineiras via chat, integrando calendário e notificações.</p>
+            <div class="tech-chips">
+              <span>Node.js</span>
+              <span>Telegram API</span>
+              <span>Cron</span>
+            </div>
+            <a href="#" class="project-link">
+              Ver projeto <i data-lucide="arrow-up-right"></i>
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Fernando Felix</p>
+    <div class="footer-links">
+      <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+      <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+      <a href="mailto:fernando@email.com" aria-label="E-mail"><i data-lucide="mail"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
